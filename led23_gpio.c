@@ -114,7 +114,7 @@ static int __init Init(void)
     
     pr_info("Major : %d    Minor : %d\n", MAJOR(mdev.dev_num), MINOR(mdev.dev_num));
     
-    if ((mdev.m_class = class_create(THIS_MODULE, "my_class_led23")) == NULL){
+    if ((mdev.m_class = class_create("my_class_led23")) == NULL){
         pr_err("ERROR: Can not create class\n");
         goto rm_dev_num;
     }
